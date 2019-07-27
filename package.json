@@ -4,7 +4,9 @@
   "description": "Replacement for JavaScript's forEach implementation; synchronous & compatible with TypeScript",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "build": "./node_modules/.bin/tsc --outDir dist --lib es5 index.ts --declaration",
+    "exectest": "./node_modules/.bin/mocha -r ts-node/register test.ts",
+    "test": "npm run build && npm run exectest"
   },
   "repository": {
     "type": "git",
@@ -22,7 +24,10 @@
   },
   "homepage": "https://github.com/ez-libs/ez-each#readme",
   "dependencies": {
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.6.8",
     "mocha": "^6.2.0",
+    "ts-node": "^8.3.0",
     "typescript": "^3.5.3"
   }
 }
