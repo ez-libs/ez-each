@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/ez-libs/ez-each/issues"
   },
-  "homepage": "https://github.com/ez-libs/ez-each#readme"
+  "homepage": "https://github.com/ez-libs/ez-each#readme",
+  "dependencies": {
+    "mocha": "^6.2.0",
+    "typescript": "^3.5.3"
+  }
 }
