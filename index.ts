@@ -10,7 +10,7 @@ interface Array<T> {
   */
 Array.prototype.ezEach = function (callback: (value: any, index?: number) => void) { //note to self: using ES6 arrow functions would rip `this` out of it's context
   for (let i = 0; i < this.length; i++) {
-    if (typeof(index= == "undefined") {
+    if (typeof(index) == "undefined") {
       callback(this[i]);
     } else callback(this[i], i);
   }
