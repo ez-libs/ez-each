@@ -16,7 +16,7 @@ describe('Array', function () {
       });
       assert.deepEqual(temp, testArray);
     });
-    it('should return the correct index', function () { //same but using the index
+    it('should return the same values as in the testArray', function () { //same but using the index
       testArray.ezEach((item: number, i: number) => {
         temp.push(i + 1)
       });
