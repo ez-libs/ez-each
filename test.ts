@@ -18,7 +18,7 @@ describe('Array', function () {
     });
     it('should return the same values as in the testArray', function () { //same but using the index
       testArray.ezEach((item: number, i: number) => {
-        temp.push(i + 1)
+        temp.push(testArray[i])
       });
       assert.deepEqual(temp, testArray);
     });
