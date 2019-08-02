@@ -1,8 +1,8 @@
 import "./dist/index";
 var assert = require('assert');
 
-var testArray: Array<number> = [1, 2, 3, 4, 5];
-var temp: Array<number>;
+var testArray: Array<string> = ["a", "b", "c", "d", "e"];
+var temp: Array<string>;
 
 beforeEach(() => {
   temp = [];
@@ -10,28 +10,28 @@ beforeEach(() => {
 
 describe('Array', function () {
   describe('#ezEach()', function () {
-    it('should work with number arrays', function () {
-      testArray.ezEach((item: number, i: number) => {
+    it('should work with typified arrays', function () {
+      testArray.ezEach((item: string) => {
         temp.push(item);
       });
       assert.deepEqual(temp, testArray);
     });
-    it('should return the same values as in the testArray', function () { //same but using the index
-      testArray.ezEach((item: number, i: number) => {
-        temp.push(testArray[i])
+    it('should return the expected index', function () {
+      testArray.ezEach((item: string, i: number) => {
+        temp.push(testArray[i]) //to verify, we pick the original entry using the index
       });
       assert.deepEqual(temp, testArray);
     });
-    it('should work with any arrays', function () {
-      let anything: Array<any> = testArray; //not sure if this test is actually useful
-      anything.ezEach((item: number, i: number) => {
+    it('should work with non-typified arrays', function () {
+      let anything: Array<any> = testArray;
+      anything.ezEach((item: string, i: number) => {
         temp.push(item);
       });
       assert.deepEqual(temp, testArray);
     });
     it('should iterate over arrays in the correct order', function () {
       let state = false;
-      testArray.ezEach((item: number, i: number) => {
+      testArray.ezEach((item: string, i: number) => {
         if (i == testArray.length - 1)
           state = true;
       });
