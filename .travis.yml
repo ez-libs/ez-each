@@ -4,6 +4,7 @@ node_js:
 script:
  - npm test
  - npm run build
+ - npm pack --dry-run #helps understanding what will be included in the tarball
 cache: npm
 
 #before_deploy: "npm run build"
