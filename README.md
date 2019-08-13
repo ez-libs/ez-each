@@ -42,7 +42,7 @@ c
 ### Using ezEach
 **Import the library just once, at a central place in your code if possible.**
 ```
-import "ez-each";
+import "ez-each"; //or require("ez-each") if you cannot use ES6
 
 ["a", "b", "c"].ezEach((letter: string) => console.log(letter));
 ```
