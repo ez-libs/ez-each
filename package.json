@@ -25,7 +25,7 @@
   "homepage": "https://github.com/ez-libs/ez-each#readme",
   "dependencies": {
     "@types/mocha": "^5.2.7",
-    "@types/node": "^12.6.8",
+    "@types/node": "^14.14.25",
     "mocha": "^6.2.0",
     "ts-node": "^8.3.0",
     "typescript": "^3.5.3"
